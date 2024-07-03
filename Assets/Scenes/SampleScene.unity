@@ -272,7 +272,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Cancel
 --- !u!222 &345804215
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -594,7 +594,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Attack
 --- !u!222 &456961311
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -673,7 +673,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Healing
 --- !u!222 &493955260
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -752,7 +752,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Item
 --- !u!222 &549361068
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1908,7 +1908,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Button
+  m_Text: Skill
 --- !u!222 &1807580405
 CanvasRenderer:
   m_ObjectHideFlags: 0
