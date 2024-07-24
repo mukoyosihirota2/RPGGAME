@@ -18,6 +18,7 @@ public class BattleManager : MonoBehaviour
     public bool GameClear;
     public bool GameOver;
     public bool Stop;
+    public bool ItemSwitch;
     public int HealingItem = 5;
     public int HealingPower = 50;
     public GameObject ItemCancel;
@@ -42,8 +43,13 @@ public class BattleManager : MonoBehaviour
         }
         if (GameOver != true&&GameClear!=true)
         {
-
-            if ( Stop == true)
+            if (ItemSwitch == true)
+            {
+                AttackButton.SetActive(false);
+                SkillButton.SetActive(false);
+                ItemButton.SetActive(false);
+            }
+            else if ( Stop == true)
             {
                 AttackButton.SetActive(false);
                 SkillButton.SetActive(false);
@@ -68,6 +74,7 @@ public class BattleManager : MonoBehaviour
             GameOverText.SetActive(true);
           
         }
+       
         else if(GameClear==true)
         {
             GameClearText.SetActive(true);
@@ -99,8 +106,10 @@ public class BattleManager : MonoBehaviour
     }
     public void Item()
     {
+
         if (HealingItem > 0)
         {
+            ItemSwitch = true;
             ItemCancel.SetActive(true);
             ItemOK.SetActive(true);
             GameText.text = "本当に使いますか？";
@@ -108,6 +117,8 @@ public class BattleManager : MonoBehaviour
     }
     public void ItemCanselButton()
     {
+        ItemSwitch = false;
+        
         //キャンセル
         ItemCancel.SetActive(false);
         ItemOK.SetActive(false);
@@ -124,6 +135,7 @@ public class BattleManager : MonoBehaviour
         ItemCancel.SetActive(false);
         ItemOK.SetActive(false);
         GameText.text = "プレイヤーは回復アイテムを使い、HPを"+HealingPower+"回復した";
+        ItemSwitch = false;
         TurnEnd();
     }
     private void EnemyTurn()
